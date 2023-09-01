@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 class="center-text">Character details</h1>
+  </div>
+  
+  <mat-divider></mat-divider>
+
+<div class="container">
+    <button mat-raised-button [routerLink]="['/']" class="margin-r">Volver</button>
+    <button mat-raised-button color="primary" (click)="viewEpisodes(character.id)">Episodes</button>
+</div>
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image:url('{{character.image}}');">
+            </div>
+            <mat-card-title>{{character.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{character.image}}" alt="character-image">
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item role="listitem"><span class="bold">Status:</span> {{character.status}}</mat-list-item>
+                <mat-list-item role="listitem"><span class="bold">Species:</span> {{character.species}}</mat-list-item>
+                <mat-list-item role="listitem"><span class="bold">Gender:</span> {{character.gender}}</mat-list-item>
+                <mat-list-item role="listitem"><span class="bold">Location:</span>
+                    {{character.location.name}}</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+
+
+</div>
